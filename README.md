@@ -158,11 +158,15 @@ Este código ejecuta la convolución de las señales definidas y grafica el resu
 
 Fig 3. Convolución del código.
 
+![Imagen de WhatsApp 2025-02-12 a las 22 06 26_7ae8af89](https://github.com/user-attachments/assets/74a2719b-1fb7-42fa-ba77-854c4e9bcbb4)
+
+Fig 4. Señal x(n)
+
 B. 
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 29 25_635d54bf](https://github.com/user-attachments/assets/0039e8be-62b2-425b-9468-cc9ac68470cc)
 
-Fig 4. Correlación de ambas señales.
+Fig 5. Correlación de ambas señales.
 
 C.
 
@@ -221,7 +225,7 @@ C.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 39_0981cde8](https://github.com/user-attachments/assets/0bda5fe8-c8b2-4b84-b8cb-c98e1ecdc571)
 
-Fig 5. Señal EEG.
+Fig 6. Señal EEG.
 
 ✔ Visualiza la señal EEG completa en un gráfico.
 
@@ -242,7 +246,7 @@ Fig 5. Señal EEG.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 39_30b96d7f](https://github.com/user-attachments/assets/b62104c9-8ce1-4b14-8907-7932a974e7c0)
 
-Fig 6. Fragmento de la señal EEG.
+Fig 7. Fragmento de la señal EEG.
 
 ✔ Grafica el segmento ampliado, útil para ver detalles de la señal.
 
@@ -308,7 +312,7 @@ Fig 6. Fragmento de la señal EEG.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 40_c61c1546](https://github.com/user-attachments/assets/57de0410-f936-4409-ad19-d4c3b1042edf)
 
-Fig 7. Bandas de frecuencia.
+Fig 8. Bandas de frecuencia.
 
 ✔ Grafica cada una de las bandas EEG, mostrando cómo varía su actividad.
 
@@ -332,7 +336,7 @@ Fig 7. Bandas de frecuencia.
         plt.show()
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 40_524a73e5](https://github.com/user-attachments/assets/1152113d-cd54-4717-80a4-c020e42f263b)
 
-Fig 8. Transformada de Fourier de la señal EEG.
+Fig 9. Transformada de Fourier de la señal EEG.
 
 ✔ Grafica la Transformada de Fourier, mostrando el espectro de frecuencias.
 
@@ -348,7 +352,7 @@ Fig 8. Transformada de Fourier de la señal EEG.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 40_b3f6b083](https://github.com/user-attachments/assets/4c59408d-46e0-4dbb-a5fe-0bfdd028d515)
 
-Fig 9. Densidad espectral de potencia (PSD) de la señal EEG.
+Fig 10. Densidad espectral de potencia (PSD) de la señal EEG.
 
 ✔ Calcula y grafica la PSD, mostrando cómo varía la energía en el tiempo.
 
@@ -380,14 +384,14 @@ Fig 9. Densidad espectral de potencia (PSD) de la señal EEG.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 46 11_9147cd18](https://github.com/user-attachments/assets/30d6006e-ef3f-4648-ada2-e44ca9057e73)
 
-Fig 10. Histograma
+Fig 11. Histograma
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 26 39_1e3a0b7f](https://github.com/user-attachments/assets/0a412245-033d-4061-882d-faa7aadcef4a)
 
-Fig 11. Valores de consola.
+Fig 12. Valores de consola.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 02_aff1761e](https://github.com/user-attachments/assets/7be78774-a282-4b57-b160-2ee34127b245)
 
-Fig 12. Valores de consola.
+Fig 13. Valores de consola.
 
 ✔ Muestra los valores finales en consola.
