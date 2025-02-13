@@ -383,10 +383,20 @@ Fig 10. Densidad espectral de potencia (PSD) de la señal EEG.
         frecuencia_media, frecuencia_mediana, desviacion_estandar = analizar_frecuencia(datos_ampliados, fs)
         print(f"Frecuencia media: {frecuencia_media:.2f} Hz")
 
+          plt.figure(figsize=(10, 6))
+            plt.hist(signal, bins=50, density=True, color='orange', alpha=0.6, label="Histograma")
+            plt.title("Histograma de la señal EEG")
+            plt.xlabel("Voltios (mV)")
+            plt.ylabel("Frecuencia relativa")
+            plt.legend()
+            plt.grid()
+            plt.show()
+
 ![Imagen de WhatsApp 2025-02-12 a las 23 06 36_b5bbee2a](https://github.com/user-attachments/assets/c9889ea0-ba3a-408a-aad6-208206f6bcfc)
 
-
 Fig 11. Histograma
+
+✔ Para graficar el histogrma
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 26 39_1e3a0b7f](https://github.com/user-attachments/assets/0a412245-033d-4061-882d-faa7aadcef4a)
 
@@ -397,3 +407,5 @@ Fig 12. Valores de consola.
 Fig 13. Valores de consola.
 
 ✔ Muestra los valores finales en consola.
+
+
