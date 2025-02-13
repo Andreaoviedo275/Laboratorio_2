@@ -350,7 +350,8 @@ Fig 9. Transformada de Fourier de la señal EEG.
         plt.colorbar(label="Intensidad")
         plt.show()
 
-![Imagen de WhatsApp 2025-02-12 a las 19 27 40_b3f6b083](https://github.com/user-attachments/assets/4c59408d-46e0-4dbb-a5fe-0bfdd028d515)
+![Imagen de WhatsApp 2025-02-12 a las 23 06 36_3672addb](https://github.com/user-attachments/assets/957e20e1-7c76-4050-94dd-13ed44d90b13)
+
 
 Fig 10. Densidad espectral de potencia (PSD) de la señal EEG.
 
@@ -382,7 +383,8 @@ Fig 10. Densidad espectral de potencia (PSD) de la señal EEG.
         frecuencia_media, frecuencia_mediana, desviacion_estandar = analizar_frecuencia(datos_ampliados, fs)
         print(f"Frecuencia media: {frecuencia_media:.2f} Hz")
 
-![Imagen de WhatsApp 2025-02-12 a las 19 46 11_9147cd18](https://github.com/user-attachments/assets/30d6006e-ef3f-4648-ada2-e44ca9057e73)
+![Imagen de WhatsApp 2025-02-12 a las 23 06 36_b5bbee2a](https://github.com/user-attachments/assets/c9889ea0-ba3a-408a-aad6-208206f6bcfc)
+
 
 Fig 11. Histograma
 
