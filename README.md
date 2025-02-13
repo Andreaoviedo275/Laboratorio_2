@@ -124,13 +124,14 @@ La convolución de dos señales discretas 𝑥(𝑛) y ℎ(𝑛) se puede realiz
   
 - Se suman los valores en diagonal para obtener 𝑦(𝑛), la señal de salida.
 
-![Imagen de WhatsApp 2025-02-11 a las 19 45 05_e72da937](https://github.com/user-attachments/assets/6d03d69a-9e3f-4792-ad69-e2903ac3caaa)
+![Imagen de WhatsApp 2025-02-12 a las 23 32 57_07a2decb](https://github.com/user-attachments/assets/436178d4-2bcf-4ee5-a97f-961fb2110720)
 
 Fig 1. Calculo manual.
 
 3️⃣ Representar la señal resultante 𝑦(𝑛) en un gráfico de líneas o puntos.
 
-![Imagen de WhatsApp 2025-02-11 a las 19 45 16_ca83ae20](https://github.com/user-attachments/assets/f8c77a78-3bc8-4a4b-87c2-7add80e95189)
+![Imagen de WhatsApp 2025-02-12 a las 23 33 08_b1da985d](https://github.com/user-attachments/assets/2e8593fc-8907-4c53-996d-453d0594740d)
+
 
 Fig 2. Gráfico
 
@@ -338,7 +339,15 @@ Fig 8. Bandas de frecuencia.
 
 Fig 9. Transformada de Fourier de la señal EEG.
 
-✔ Grafica la Transformada de Fourier, mostrando el espectro de frecuencias.
+✔️ Grafica la Transformada de Fourier, mostrando el espectro de frecuencias.
+
+✔️ Se pueden identificar las frecuencias dominantes en la señal EEG.
+
+✔️ Si hay artefactos o ruido, se verán componentes de alta frecuencia no relacionadas con la actividad cerebral.
+
+✔️ Un EEG normal mostrará la mayor parte de su potencia en frecuencias bajas.
+
+✔️ Si la señal ha sido filtrada, se verá una reducción de las frecuencias fuera del rango de interés.
 
 6️⃣ Densidad Espectral de Potencia (PSD)
 
@@ -355,7 +364,23 @@ Fig 9. Transformada de Fourier de la señal EEG.
 
 Fig 10. Densidad espectral de potencia (PSD) de la señal EEG.
 
-✔ Calcula y grafica la PSD, mostrando cómo varía la energía en el tiempo.
+✔️ Calcula y grafica la PSD, mostrando cómo varía la energía en el tiempo.
+
+✔️ Picos en ciertas bandas de frecuencia que corresponden a ondas cerebrales específicas (delta, theta, alpha, beta y gamma).
+
+✔️ La mayor parte de la energía suele concentrarse en frecuencias bajas (por debajo de 30 Hz).
+
+✔️ Dependiendo del estado del paciente, se pueden ver diferencias en la actividad en cada banda:
+
+Ondas delta (0.5 - 4 Hz) → Estado de sueño profundo.
+
+Ondas theta (4 - 8 Hz) → Relajación, somnolencia.
+
+Ondas alpha (8 - 13 Hz) → Estado de calma, relajación con ojos cerrados.
+
+Ondas beta (13 - 30 Hz) → Atención y concentración.
+
+Ondas gamma (>30 Hz) → Procesamiento cognitivo elevado.
 
 7️⃣ Análisis estadístico en el dominio de la frecuencia
 
