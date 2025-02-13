@@ -163,11 +163,15 @@ Fig 3. Convolución del código.
 
 Fig 4. Señal x(n)
 
+![Imagen de WhatsApp 2025-02-13 a las 00 34 20_00960ea8](https://github.com/user-attachments/assets/a6abc278-b3eb-44cf-935b-f4e4d6ea43ea)
+
+Fig 5. Señal h(n)
+
 B. 
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 29 25_635d54bf](https://github.com/user-attachments/assets/0039e8be-62b2-425b-9468-cc9ac68470cc)
 
-Fig 5. Correlación de ambas señales.
+Fig 6. Correlación de ambas señales.
 
 C.
 
@@ -226,7 +230,7 @@ C.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 39_0981cde8](https://github.com/user-attachments/assets/0bda5fe8-c8b2-4b84-b8cb-c98e1ecdc571)
 
-Fig 6. Señal EEG.
+Fig 7. Señal EEG.
 
 ✔ Visualiza la señal EEG completa en un gráfico.
 
@@ -247,7 +251,7 @@ Fig 6. Señal EEG.
 
 ![Imagen de WhatsApp 2025-02-12 a las 19 27 39_30b96d7f](https://github.com/user-attachments/assets/b62104c9-8ce1-4b14-8907-7932a974e7c0)
 
-Fig 7. Fragmento de la señal EEG.
+Fig 8. Fragmento de la señal EEG.
 
 ✔ Grafica el segmento ampliado, útil para ver detalles de la señal.
 
@@ -279,45 +283,7 @@ Fig 7. Fragmento de la señal EEG.
 
 ✔ Imprime los valores calculados en consola.
 
-4️⃣ Filtrado por bandas de frecuencia EEG
-
-        def filtro_pasabanda(datos, corte_bajo, corte_alto, fs, orden=4):
-            nyquist = 0.5 * fs  
-            bajo = corte_bajo / nyquist
-            alto = corte_alto / nyquist
-            b, a = butter(orden, [bajo, alto], btype='band')  
-            return filtfilt(b, a, datos)
-        def filtro_pasabanda(datos, corte_bajo, corte_alto, fs, orden=4):
-            nyquist = 0.5 * fs  
-            bajo = corte_bajo / nyquist
-            alto = corte_alto / nyquist
-            b, a = butter(orden, [bajo, alto], btype='band')  
-            return filtfilt(b, a, datos)
-            
-✔ El teorema de muestreo de Nyquist establece que una señal debe ser muestreada con una frecuencia al menos el doble de su frecuencia máxima para evitar aliasing.
-
-✔ Aplica un filtro pasa banda para aislar diferentes frecuencias EEG.
-
-        delta = filtro_pasabanda(datos_ampliados, 0.5, 4, fs)
-        theta = filtro_pasabanda(datos_ampliados, 4, 8, fs)
-        alpha = filtro_pasabanda(datos_ampliados, 8, 13, fs)
-        beta = filtro_pasabanda(datos_ampliados, 13, 30, fs)
-        gamma = filtro_pasabanda(datos_ampliados, 30, 100, fs)
-
-✔ Se aplican filtros para extraer las diferentes bandas de frecuencia EEG.
-
-        plt.figure(figsize=(12, 8))
-        plt.subplot(5, 1, 1)
-        plt.plot(delta, color='blue')
-        plt.title('Señal filtrada en Delta (0.5-4 Hz)')
-
-![Imagen de WhatsApp 2025-02-12 a las 19 27 40_c61c1546](https://github.com/user-attachments/assets/57de0410-f936-4409-ad19-d4c3b1042edf)
-
-Fig 8. Bandas de frecuencia.
-
-✔ Grafica cada una de las bandas EEG, mostrando cómo varía su actividad.
-
-5️⃣ Transformada de Fourier (FFT) y análisis espectral
+4️⃣ Transformada de Fourier (FFT) y análisis espectral
 
         fft_signal = np.fft.fft(datos_ampliados)
         frecuencias = np.fft.fftfreq(len(datos_ampliados), 1/fs)
@@ -349,7 +315,7 @@ Fig 9. Transformada de Fourier de la señal EEG.
 
 ✔️ Si la señal ha sido filtrada, se verá una reducción de las frecuencias fuera del rango de interés.
 
-6️⃣ Densidad Espectral de Potencia (PSD)
+5️⃣Densidad Espectral de Potencia (PSD)
 
         plt.figure(figsize=(12, 5))
         plt.specgram(datos_ampliados, Fs=fs, NFFT=2048, noverlap=1024, cmap='plasma')
@@ -367,6 +333,9 @@ Fig 10. Densidad espectral de potencia (PSD) de la señal EEG.
 ✔️ Calcula y grafica la PSD, mostrando cómo varía la energía en el tiempo.
 
 ✔️ Picos en ciertas bandas de frecuencia que corresponden a ondas cerebrales específicas (delta, theta, alpha, beta y gamma).
+✔️ La clasificación de las señales se puede ver en la densidad espectral porque en el eje x están la frecuencias
+
+✔️ Está nos puede ayudar a ver la potencia que tienen las muestras, cuando es una potencia muy alta espectral
 
 ✔️ La mayor parte de la energía suele concentrarse en frecuencias bajas (por debajo de 30 Hz).
 
@@ -382,7 +351,7 @@ Ondas beta (13 - 30 Hz) → Atención y concentración.
 
 Ondas gamma (>30 Hz) → Procesamiento cognitivo elevado.
 
-7️⃣ Análisis estadístico en el dominio de la frecuencia
+6️⃣ Análisis estadístico en el dominio de la frecuencia
 
         def analizar_frecuencia(signal, fs):
             señal_filtrada = filtro_pasabanda(signal, 0.5, 30, fs)  
@@ -408,16 +377,16 @@ Ondas gamma (>30 Hz) → Procesamiento cognitivo elevado.
         frecuencia_media, frecuencia_mediana, desviacion_estandar = analizar_frecuencia(datos_ampliados, fs)
         print(f"Frecuencia media: {frecuencia_media:.2f} Hz")
 
-          plt.figure(figsize=(10, 6))
-            plt.hist(signal, bins=50, density=True, color='orange', alpha=0.6, label="Histograma")
-            plt.title("Histograma de la señal EEG")
-            plt.xlabel("Voltios (mV)")
-            plt.ylabel("Frecuencia relativa")
-            plt.legend()
-            plt.grid()
-            plt.show()
+        plt.figure(figsize=(8, 5))
+        plt.hist(frecuencias, bins=30, density=True, color="orange", edgecolor="black", alpha=0.75)
+        plt.xlabel("Frecuencia (Hz)")
+        plt.ylabel("Frecuencia relativa")
+        plt.title("Histograma de las frecuencias dominantes de la señal EEG")
+        plt.grid(axis="y", linestyle="--", alpha=0.7)
 
-![Imagen de WhatsApp 2025-02-12 a las 23 06 36_b5bbee2a](https://github.com/user-attachments/assets/c9889ea0-ba3a-408a-aad6-208206f6bcfc)
+
+![Imagen de WhatsApp 2025-02-13 a las 00 34 21_4505d8e5](https://github.com/user-attachments/assets/d2067135-baba-45f4-a5bf-24a7985319f6)
+
 
 Fig 11. Histograma
 
