@@ -115,9 +115,10 @@ La convolución de dos señales discretas 𝑥(𝑛) y ℎ(𝑛) se puede realiz
 1️⃣ Escribir las señales:
 
 𝑥(𝑛)=[5,6,0,0,4,7,7]
+
 ℎ(𝑛)=[1,0,0,3,5,2,7,4,8]
 
-2️⃣ Formar la tabla de convolución:
+2️⃣ Formar la tabla de convolución discreta:
 
 - Se desplaza ℎ(𝑛) y se multiplica por cada valor de 𝑥(𝑛).
   
@@ -287,6 +288,8 @@ Fig 6. Fragmento de la señal EEG.
             alto = corte_alto / nyquist
             b, a = butter(orden, [bajo, alto], btype='band')  
             return filtfilt(b, a, datos)
+            
+✔ El teorema de muestreo de Nyquist establece que una señal debe ser muestreada con una frecuencia al menos el doble de su frecuencia máxima para evitar aliasing.
 
 ✔ Aplica un filtro pasa banda para aislar diferentes frecuencias EEG.
 
